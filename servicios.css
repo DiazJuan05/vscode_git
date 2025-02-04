@@ -1,0 +1,174 @@
+:root {
+    --azul-suave: #7ab8d0;  /* Azul más suave */
+    --morado: #9a4f96;
+    --blanco: #fff;
+    --gris-claro: #f1f1f1;
+    --verde-whatsapp: #25D366;
+    --negro-tiktok: #000;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--blanco);
+}
+
+/* Header */
+.header {
+    background: url('imagenes/servicios.png') no-repeat center center;
+    background-size: cover;
+    color: var(--blanco);
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.nav-rect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--blanco);
+    width: 120px;
+    height: 50px;
+    background: var(--morado);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-rect:hover {
+    transform: scale(1.05);
+    background: var(--azul-suave);
+}
+
+.logo-imagen {
+    width: 150px;
+    height: auto;
+}
+
+/* Contenido principal */
+.header-content {
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.header-txt h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header-txt span {
+    color: var(--morado);
+}
+
+.butons {
+    margin-top: 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--morado);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Tarjeta de servicio */
+.servicio {
+    background: var(--blanco);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes uniformes */
+.servicio-imagen {
+    width: 10%;
+    border-radius: 10px;
+}
+
+/* Botón de cotización */
+.btn-cotizar {
+    background: var(--morado);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-cotizar:hover {
+    background: #7a3b72;
+}
+
+/* Formulario a lo ancho */
+.formulario {
+    display: none;
+    width: 10%;
+    padding: 10px;
+    background: var(--gris-claro);
+    border-radius: 5px;
+}
+
+.formulario input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.formulario button {
+    background: var(--morado);
+    color: var(--blanco);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #7a3b72;
+}

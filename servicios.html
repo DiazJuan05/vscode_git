@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="menu">
+        <a href="index.html" class="logo">
+            <img src="imagenes/logo.png" alt="Logo" class="logo-imagen">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="nav-rect">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-rect">Servicios</a></li>
+                <li><a href="contacto.html" class="nav-rect">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="servicios container">
+    <h2 class="titulo">Nuestros Servicios</h2>
+
+    <div class="servicios-grid">
+        <!-- Seguro de Vida -->
+        <div class="servicio">
+            <img src="imagenes/vida.png" alt="Seguro de Vida" class="servicio-imagen">
+            <h3>Seguro de Vida</h3>
+            <p>Protege el futuro de tu familia hoy. Un seguro de vida que cuida de los que más amas</p>
+            <button class="btn-cotizar" onclick="toggleForm('form1')">Cotizar</button>
+            <div id="form1" class="formulario">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="tel" placeholder="Teléfono" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Seguro de Automóvil -->
+        <div class="servicio">
+            <img src="imagenes/carro.png" alt="Seguro de automovilies" class="servicio-imagen">
+            <h3>Seguro de Automóvil</h3>
+            <p>Conduce con tranquilidad, nosotros nos encargamos de protegerte en el camino</p>
+            <button class="btn-cotizar" onclick="toggleForm('form2')">Cotizar</button>
+            <div id="form2" class="formulario">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="tel" placeholder="Teléfono" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="servicio">
+            <img src="imagenes/viaje.png" alt="Seguro de viaje" class="servicio-imagen">
+            <h3>Seguro de Automóvil</h3>
+            <p>Explora el mundo sin preocupaciones. Viaja seguro con la mejor cobertura</p>
+            <button class="btn-cotizar" onclick="toggleForm('form2')">Cotizar</button>
+            <div id="form2" class="formulario">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="tel" placeholder="Teléfono" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="servicio">
+            <img src="imagenes/viaje.png" alt="Seguro de automovilies" class="servicio-imagen">
+            <h3>Seguro de Automóvil</h3>
+            <p>Explora el mundo sin preocupaciones. Viaja seguro con la mejor cobertura</p>
+            <button class="btn-cotizar" onclick="toggleForm('form2')">Cotizar</button>
+            <div id="form2" class="formulario">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="tel" placeholder="Teléfono" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+</main>
+
+<script>
+    function toggleForm(formId) {
+        var form = document.getElementById(formId);
+        form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+    }
+</script>
+
+<footer>
+    <p>&copy; 2024 Seguros XYZ. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

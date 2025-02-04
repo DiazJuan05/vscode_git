@@ -1,0 +1,357 @@
+/* Variables de color */
+:root {
+    --azul-suave: #7ab8d0;  /* Azul más suave */
+    --morado: #9a4f96;
+    --blanco: #fff;
+    --gris-claro: #f1f1f1;
+    --verde-whatsapp: #25D366;
+    --negro-tiktok: #000;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--blanco);
+}
+
+/* Header */
+.header {
+    background: url('imagenes/familia.png') no-repeat center center;
+    background-size: cover;
+    color: var(--blanco);
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.nav-rect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--blanco);
+    width: 120px;
+    height: 50px;
+    background: var(--morado);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-rect:hover {
+    transform: scale(1.05);
+    background: var(--azul-suave);
+}
+
+.logo-imagen {
+    width: 150px;
+    height: auto;
+}
+
+/* Contenido principal */
+.header-content {
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.header-txt h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header-txt span {
+    color: var(--morado);
+}
+
+.butons {
+    margin-top: 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--morado);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: var(--azul-suave);
+}
+
+/* Sección Quienes Somos */
+.quienes-somos {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quienes-somos p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sección Formulario */
+.formulario-contacto {
+    background: var(--blanco);
+    color: var(--azul-suave);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.formulario-contacto .campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto .campo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.formulario-contacto input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--azul-suave);
+    border-radius: 8px;
+}
+
+.formulario-contacto button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--morado);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: var(--azul-suave);
+}
+
+/* Sección Aliados */
+.popular {
+    text-align: center;
+    padding: 2rem;
+    color: #000000; /* Negro */
+}
+
+.aliados-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.aliado img {
+    width: 150px;
+    height: auto;
+    background-color: transparent;
+    object-fit: contain;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    color: #000000;
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.redes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* comentario prueba */
+.boton-red {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.boton-red:hover {
+    transform: scale(1.1);
+}
+
+.social-facebook {
+    background-color: #3b5998;
+}
+
+.social-whatsapp {
+    background-color: var(--verde-whatsapp);
+}
+
+.social-tiktok {
+    background-color: var(--negro-tiktok);
+}
+
+.boton-red img {
+    width: 30px;
+    height: auto;
+}
+
+footer {
+    background-color: var(--morado); /* Morado */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .header-txt h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-txt span {
+        font-size: 1.5rem;
+    }
+
+    .header-content {
+        margin-top: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-imagen {
+        width: 120px;
+    }
+
+    .formulario-contacto {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .aliados-grid {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aliado img {
+        width: 120px;
+    }
+
+    .redes-sociales {
+        right: 5px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-txt h1 {
+        font-size: 2rem;
+    }
+
+    .header-txt span {
+        font-size: 1.2rem;
+    }
+
+    .btn-1 {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .formulario-contacto {
+        width: 95%;
+        padding: 1.2rem;
+    }
+
+    .aliado img {
+        width: 100px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
